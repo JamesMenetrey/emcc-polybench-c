@@ -4,7 +4,7 @@ SCRIPT_PATH=$(dirname $(realpath $0))
 # exit when any command fails
 set -e
 
-readonly BUILD_PATH=${SCRIPT_PATH}/build
+readonly BUILD_PATH=${SCRIPT_PATH}/output
 readonly BENCHMARKS="2mm 3mm adi atax bicg cholesky correlation covariance deriche doitgen durbin fdtd-2d floyd-warshall gemm gemver gesummv gramschmidt heat-3d jacobi-1d jacobi-2d lu ludcmp mvt nussinov seidel-2d symm syr2k syrk trisolv trmm"
 
 . /emsdk/emsdk_env.sh
