@@ -13,6 +13,6 @@ mkdir -p $BUILD_PATH
 for b in $BENCHMARKS; do
 	src=`find . -name $b.c`
 	dir=`dirname $src`
-	echo "emcc -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 $size -O3 -I utilities -I $dir utilities/polybench.c $src -DPOLYBENCH_TIME -lm -o $BUILD_PATH/$b.js.."
-	emcc -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 $size -O3 -I utilities -I $dir utilities/polybench.c $src -DPOLYBENCH_TIME -lm -o $BUILD_PATH/$b.js
+	echo "emcc -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -O3 -I utilities -I $dir utilities/polybench.c $src -DPOLYBENCH_TIME -lm -o $BUILD_PATH/$b.js.."
+	emcc -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -O3 -I utilities -I $dir utilities/polybench.c $src -DPOLYBENCH_TIME -lm -o $BUILD_PATH/$b.js
 done
